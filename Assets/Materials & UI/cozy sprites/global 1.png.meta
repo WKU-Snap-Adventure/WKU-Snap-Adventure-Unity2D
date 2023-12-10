@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f242ac28555c1fa4bb45fb2b5274a087
+guid: fd954ca18c2f33840976a9150edd6129
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -103,91 +103,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: winter_0
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 0
-        width: 46
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51d98b789f444374da1a87cbdb2c19be
-      internalID: -1266589540
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: winter_1
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 078509f8594fce8478704b4eb71af487
-      internalID: 813932757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: winter_2
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 32
-        width: 12
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a70e01b9c1e9444d95e1fef1ed73671
-      internalID: -1596118583
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: winter_3
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 0
-        width: 15
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1fe39440290a4884fabf310c17e93336
-      internalID: 1166548909
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -198,11 +114,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      winter_0: -1266589540
-      winter_1: 813932757
-      winter_2: -1596118583
-      winter_3: 1166548909
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
