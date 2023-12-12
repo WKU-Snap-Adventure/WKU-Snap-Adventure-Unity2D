@@ -470,7 +470,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 440497890ed47ca449a56f4a2b21ea74, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -29047,7 +29047,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 9168679348317093058}
         m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
         m_MethodName: LoadNextLevel
         m_Mode: 1
@@ -29938,6 +29938,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6297606657372235051, guid: 8d6f38324576e6c45825d2bba8170aac, type: 3}
+      propertyPath: toWhichLevelIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9168679347980275183, guid: 8d6f38324576e6c45825d2bba8170aac, type: 3}
       propertyPath: m_Name
       value: Level Loader
@@ -30073,3 +30077,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6297606657372235050, guid: 8d6f38324576e6c45825d2bba8170aac, type: 3}
   m_PrefabInstance: {fileID: 9168679348317093056}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9168679348317093058 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6297606657372235051, guid: 8d6f38324576e6c45825d2bba8170aac, type: 3}
+  m_PrefabInstance: {fileID: 9168679348317093056}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440497890ed47ca449a56f4a2b21ea74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
