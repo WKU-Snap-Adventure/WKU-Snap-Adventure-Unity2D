@@ -41,7 +41,7 @@ public class PanelLoader : MonoBehaviour
             quitButton.interactable = true;
         }
 
-        iconButton.transition = Selectable.Transition.ColorTint;
+        iconButton.transition = Selectable.Transition.SpriteSwap;
     }
 
     public void ClosePanel()
