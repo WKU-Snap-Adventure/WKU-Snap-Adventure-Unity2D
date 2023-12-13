@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class InventoryUI : MonoBehaviour
+public class InventoryUpdate : MonoBehaviour
 {
 
     public Transform ItemSlotContainer;
