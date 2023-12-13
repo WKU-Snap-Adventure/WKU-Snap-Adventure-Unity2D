@@ -5,7 +5,6 @@ public class InventorySlot : MonoBehaviour
 
     public Image icon;
     public Text amount;
-    private int amountNumber;
     
     Item item;
 
@@ -16,15 +15,15 @@ public class InventorySlot : MonoBehaviour
         icon.enabled = true;
         
         amount.enabled = true;
-        amountNumber++;
-        amount.text = amountNumber.ToString();
+        item.amountNumber++;
+        amount.text = item.amountNumber.ToString();
     }
 
     public void ClearSlot(){
         item = null;
         icon.sprite = null;
         icon.enabled = false;
-        amountNumber = 0;
+        item.amountNumber = 0;
     }
 
     public void RemoveToTheTrashcan(){
