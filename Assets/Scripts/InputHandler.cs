@@ -26,6 +26,7 @@ public class InputHandler : MonoBehaviour
 
         // Convey the item type to Inventory
         Item itemClicked = rayHit.collider.GetComponent<ItemInteractable>().item;
+        
         if (inventory.Add(itemClicked))
             Debug.Log("Trying to destroy " + itemClicked.name);
             Destroy(rayHit.collider.gameObject);

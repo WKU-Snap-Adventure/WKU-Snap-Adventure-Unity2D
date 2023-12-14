@@ -30,16 +30,15 @@ public class Inventory : MonoBehaviour
     {
         if (!newItem.isDefaultItem)
         {
-            Item existingItem = itemList.Find(item => item.name == newItem.name);
-
-            if(existingItem != null){
+            bool ifExist = itemList.Find(item => item.name == newItem.name) != null;
+            
+            if(!ifExist){
                 // Add slot
-            }
-            else{
-                // 
+                inventoryAdmin.AddSlot(newItem); 
             }
             // Increase Number
-        
+            inventoryAdmin.IncreaseItemAmount(newItem);
+            return true;
         }
         return true;
     }

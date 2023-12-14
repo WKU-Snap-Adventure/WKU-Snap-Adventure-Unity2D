@@ -17,7 +17,7 @@ public class InventoryAdmin : MonoBehaviour
         slots = ItemSlotContainer.GetComponentsInChildren<InventorySlot>();
     }
     
-    void AddSlot()
+    public void AddSlot(Item item)
     {
         GameObject newSlot = Instantiate(inventorySlot);
 
@@ -33,6 +33,10 @@ public class InventoryAdmin : MonoBehaviour
         {
             Debug.LogWarning("ItemSlotContainer not assigned. The InventorySlot will be a root-level object.");
         }
+
+        InventorySlot newInventorySlot = newSlot.GetComponent<InventorySlot>();
+
+        newInventorySlot.LoadItem(item);
     }
 
 
