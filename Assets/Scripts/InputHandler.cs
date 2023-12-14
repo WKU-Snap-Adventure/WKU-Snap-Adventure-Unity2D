@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// This script contained in InputHandler
 public class InputHandler : MonoBehaviour
 {
     private Camera _mainCamera;
@@ -13,6 +15,7 @@ public class InputHandler : MonoBehaviour
         inventory = Inventory.instance;
     }
 
+//  This method is responsible for the click event
     public void OnClick(InputAction.CallbackContext context){
         if (!context.started) return;
 
@@ -21,8 +24,10 @@ public class InputHandler : MonoBehaviour
 
         Debug.Log(rayHit.collider.gameObject.name);
 
+        // Convey the item type to Inventory
         Item itemClicked = rayHit.collider.GetComponent<ItemInteractable>().item;
         if (inventory.Add(itemClicked))
+            Debug.Log("Trying to destroy " + itemClicked.name);
             Destroy(rayHit.collider.gameObject);
     }
 

@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class InventorySlot : MonoBehaviour
@@ -6,24 +8,25 @@ public class InventorySlot : MonoBehaviour
     public Image icon;
     public Text amount;
     
-    Item item;
+    // Record item info
+    public Item item;
 
-    public void AddItem(Item newItem){
+    public int itemAmount;
+
+    public void LoadItem(Item newItem){
         item = newItem;
 
         icon.sprite = item.icon;
         icon.enabled = true;
         
         amount.enabled = true;
-        item.amountNumber++;
-        amount.text = item.amountNumber.ToString();
+        amount.text = itemAmount.ToString();
     }
 
     public void ClearSlot(){
         item = null;
         icon.sprite = null;
         icon.enabled = false;
-        item.amountNumber = 0;
     }
 
     public void RemoveToTheTrashcan(){
