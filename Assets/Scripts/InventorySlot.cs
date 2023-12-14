@@ -25,8 +25,12 @@ public class InventorySlot : MonoBehaviour
 
     public void ClearSlot(){
         item = null;
+
         icon.sprite = null;
         icon.enabled = false;
+
+        amount.enabled = false;
+        itemAmount = 0;
     }
 
     public void RemoveToTheTrashcan(){
