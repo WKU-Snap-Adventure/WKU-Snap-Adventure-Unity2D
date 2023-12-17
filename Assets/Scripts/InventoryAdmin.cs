@@ -14,7 +14,7 @@ public class InventoryAdmin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        slots = ItemSlotContainer.GetComponentsInChildren<InventorySlot>();
+        
     }
     
     public void AddSlot(Item item)
@@ -43,7 +43,7 @@ public class InventoryAdmin : MonoBehaviour
 // For every slot, try to load item refering to the inventory item list.
 
     public void ClearSlot(Item item){
-        // 
+        slots = ItemSlotContainer.GetComponentsInChildren<InventorySlot>();
         for (int i = 0; i < slots.Length; i++)
         {
             if (slots[i].item.name == item.name)
@@ -52,10 +52,14 @@ public class InventoryAdmin : MonoBehaviour
     }
 
     public void IncreaseItemAmount(Item item) {
+        slots = ItemSlotContainer.GetComponentsInChildren<InventorySlot>();
+
         for (int i = 0; i < slots.Length; i++)
         {
+            Debug.Log(slots[i].item.name);
             if (slots[i].item.name == item.name){
                 slots[i].itemAmount++;
+                slots[i].amount.text = slots[i].itemAmount.ToString();
             }
         }
     }

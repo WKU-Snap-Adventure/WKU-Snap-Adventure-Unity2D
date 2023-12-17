@@ -23,8 +23,11 @@ public class Inventory : MonoBehaviour
     }
     #endregion
 
+     
+    public InventoryAdmin inventoryAdmin;
+
     public List<Item> itemList = new List<Item>();
-    private InventoryAdmin inventoryAdmin;
+
 
     public bool Add(Item newItem)
     {
@@ -34,7 +37,8 @@ public class Inventory : MonoBehaviour
             
             if(!ifExist){
                 // Add slot
-                inventoryAdmin.AddSlot(newItem); 
+                inventoryAdmin.AddSlot(newItem);
+                itemList.Add(newItem);
             }
             // Increase Number
             inventoryAdmin.IncreaseItemAmount(newItem);
