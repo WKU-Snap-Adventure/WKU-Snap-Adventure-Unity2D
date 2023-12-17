@@ -135,9 +135,9 @@ GameObject:
   - component: {fileID: 26886102}
   - component: {fileID: 26886101}
   - component: {fileID: 26886100}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Twig
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -250,9 +250,9 @@ GameObject:
   - component: {fileID: 53378815}
   - component: {fileID: 53378814}
   - component: {fileID: 53378813}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Dandelion
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -667,9 +667,9 @@ GameObject:
   - component: {fileID: 170448184}
   - component: {fileID: 170448183}
   - component: {fileID: 170448182}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Branch
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1138,9 +1138,9 @@ GameObject:
   - component: {fileID: 411982019}
   - component: {fileID: 411982018}
   - component: {fileID: 411982017}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leaf (1)
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1385,9 +1385,9 @@ GameObject:
   - component: {fileID: 459431347}
   - component: {fileID: 459431346}
   - component: {fileID: 459431345}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TreeSeed
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1717,9 +1717,9 @@ GameObject:
   - component: {fileID: 522338279}
   - component: {fileID: 522338281}
   - component: {fileID: 522338282}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leaf
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1832,9 +1832,9 @@ GameObject:
   - component: {fileID: 560577327}
   - component: {fileID: 560577326}
   - component: {fileID: 560577325}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leaf (4)
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31423,9 +31423,9 @@ GameObject:
   - component: {fileID: 1363202143}
   - component: {fileID: 1363202142}
   - component: {fileID: 1363202141}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leaf (3)
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31615,9 +31615,9 @@ GameObject:
   - component: {fileID: 1402643943}
   - component: {fileID: 1402643942}
   - component: {fileID: 1402643941}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mushroom
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31730,9 +31730,9 @@ GameObject:
   - component: {fileID: 1467208241}
   - component: {fileID: 1467208240}
   - component: {fileID: 1467208239}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leaf (2)
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32216,9 +32216,9 @@ GameObject:
   - component: {fileID: 1839485666}
   - component: {fileID: 1839485665}
   - component: {fileID: 1839485664}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leaf (5)
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32331,9 +32331,9 @@ GameObject:
   - component: {fileID: 1906959671}
   - component: {fileID: 1906959670}
   - component: {fileID: 1906959669}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pine Nut
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

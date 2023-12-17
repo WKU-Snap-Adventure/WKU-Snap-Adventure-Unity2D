@@ -23,10 +23,12 @@ public class InputHandler : MonoBehaviour
         if(!rayHit.collider) return;
 
         // Convey the item type to Inventory
-        Item itemClicked = rayHit.collider.GetComponent<ItemInteractable>().item;
-        
-        if (inventory.Add(itemClicked))
-            Destroy(rayHit.collider.gameObject);
+        if (rayHit.collider != null && (rayHit.collider.CompareTag("Item") || rayHit.collider.CompareTag("Interactable"))){
+            Item itemClicked = rayHit.collider.GetComponent<ItemInteractable>().item;
+                
+            if (inventory.Add(itemClicked))
+                Destroy(rayHit.collider.gameObject);
+        }
     }
 
 
