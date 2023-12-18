@@ -22,14 +22,13 @@ public class InputHandler : MonoBehaviour
         var rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
         if(!rayHit.collider) return;
 
-        Debug.Log(rayHit.collider.gameObject.name);
-
         // Convey the item type to Inventory
-        Item itemClicked = rayHit.collider.GetComponent<ItemInteractable>().item;
-        
-        if (inventory.Add(itemClicked))
-            Debug.Log("Trying to destroy " + itemClicked.name);
-            Destroy(rayHit.collider.gameObject);
+        if (rayHit.collider != null && (rayHit.collider.CompareTag("Item") || rayHit.collider.CompareTag("Interactable"))){
+            Item itemClicked = rayHit.collider.GetComponent<ItemInteractable>().item;
+                
+            if (inventory.Add(itemClicked))
+                Destroy(rayHit.collider.gameObject);
+        }
     }
 
 

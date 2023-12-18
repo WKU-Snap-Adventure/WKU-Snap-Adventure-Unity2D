@@ -9,6 +9,7 @@ public class PanelLoader : MonoBehaviour
     public float transitionTime = 2.5f;
     private Button iconButton;
     private Button quitButton;
+    private bool PanelOn = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +21,20 @@ public class PanelLoader : MonoBehaviour
         {
             quitButton = quit.GetComponent<Button>();
         }
+
+        if(PanelOn){
+            ClosePanel();
+        }
     }
 
     public void LoadPanel()
     {
-        iconButton.transition = Selectable.Transition.None;
-        LoadedPanelAnimator.SetTrigger("LoadPanel");
-        StartCoroutine(WaitForLoadPanelAnimation());
+        if(!PanelOn){
+            iconButton.transition = Selectable.Transition.None;
+            LoadedPanelAnimator.SetTrigger("LoadPanel");
+            StartCoroutine(WaitForLoadPanelAnimation());
+            PanelOn = true;
+        }
     }
 
     IEnumerator WaitForLoadPanelAnimation()
@@ -43,18 +51,20 @@ public class PanelLoader : MonoBehaviour
 
     public void ClosePanel()
     {
-        if (quitButton != null)
-        {
-            quitButton.interactable = false;
-        }
+        if(PanelOn){
+            if (quitButton != null)
+            {
+                quitButton.interactable = false;
+            }
 
-        LoadedPanelAnimator.SetTrigger("ClosePanel");
-        StartCoroutine(WaitForClosePanelAnimationAndClosePanel());
+            LoadedPanelAnimator.SetTrigger("ClosePanel");
+            StartCoroutine(WaitForClosePanelAnimationAndClosePanel());
+            PanelOn = false;
+        }
     }
 
     IEnumerator WaitForClosePanelAnimationAndClosePanel()
     {
         yield return new WaitForSeconds(transitionTime);
-
     }
 }
