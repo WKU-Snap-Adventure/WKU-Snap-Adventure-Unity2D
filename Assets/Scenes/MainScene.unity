@@ -1041,7 +1041,7 @@ PrefabInstance:
     - target: {fileID: 926893525070150336, guid: 986b3a47074e9074bb14664b480b2af4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 433040718}
     - target: {fileID: 926893525070150336, guid: 986b3a47074e9074bb14664b480b2af4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartPlacement
@@ -1117,7 +1117,7 @@ PrefabInstance:
     - target: {fileID: 2521864615777436501, guid: 986b3a47074e9074bb14664b480b2af4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 433040718}
     - target: {fileID: 2521864615777436501, guid: 986b3a47074e9074bb14664b480b2af4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartPlacement
@@ -1129,7 +1129,7 @@ PrefabInstance:
     - target: {fileID: 3664765629275769140, guid: 986b3a47074e9074bb14664b480b2af4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 433040718}
     - target: {fileID: 3664765629275769140, guid: 986b3a47074e9074bb14664b480b2af4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartPlacement
@@ -1313,7 +1313,7 @@ PrefabInstance:
     - target: {fileID: 8770486957863231269, guid: 986b3a47074e9074bb14664b480b2af4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 433040718}
     - target: {fileID: 8770486957863231269, guid: 986b3a47074e9074bb14664b480b2af4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartPlacement
@@ -33234,7 +33234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6ea6d5b52ebe44588093418f484691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 0}
+  sceneCamera: {fileID: 519420031}
   placementLayermask:
     serializedVersion: 2
     m_Bits: 8
