@@ -12,9 +12,11 @@ public class InventoryAdmin : MonoBehaviour
     InventorySlot[] slots;
     
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.G)){
+            Report();
+        }
     }
     
     public void AddSlot(Item item)
@@ -61,6 +63,19 @@ public class InventoryAdmin : MonoBehaviour
                 slots[i].itemAmount++;
                 slots[i].amount.text = slots[i].itemAmount.ToString();
             }
+        }
+    }
+
+    public void Report(){
+        foreach (var slot in slots)
+        {
+            string json = JsonUtility.ToJson(new
+            {
+                itemName = slot.item.name,
+                itemAmount = slot.itemAmount
+            });
+
+            Debug.Log(json);
         }
     }
 }
