@@ -35,7 +35,8 @@ public class Inventory : MonoBehaviour
         {
             bool ifExist = itemList.Find(item => item.name == newItem.name) != null;
             
-            if(!ifExist){
+            if(!ifExist)
+            {
                 // Add slot
                 inventoryAdmin.AddSlot(newItem);
                 itemList.Add(newItem);

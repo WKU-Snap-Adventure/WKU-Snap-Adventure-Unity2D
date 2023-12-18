@@ -42,7 +42,8 @@ public class InventoryAdmin : MonoBehaviour
 
 // For every slot, try to load item refering to the inventory item list.
 
-    public void ClearSlot(Item item){
+    public void ClearSlot(Item item)
+    {
         slots = ItemSlotContainer.GetComponentsInChildren<InventorySlot>();
         for (int i = 0; i < slots.Length; i++)
         {
@@ -51,7 +52,8 @@ public class InventoryAdmin : MonoBehaviour
         }
     }
 
-    public void IncreaseItemAmount(Item item) {
+    public void IncreaseItemAmount(Item item) 
+    {
         slots = ItemSlotContainer.GetComponentsInChildren<InventorySlot>();
 
         for (int i = 0; i < slots.Length; i++)
