@@ -13,8 +13,6 @@ public class PanelLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LoadedPanel.SetActive(false);
-
         iconButton = transform.parent.GetComponent<Button>();
         Transform quit = transform.parent.Find("Quit");
 
@@ -27,7 +25,6 @@ public class PanelLoader : MonoBehaviour
     public void LoadPanel()
     {
         iconButton.transition = Selectable.Transition.None;
-        LoadedPanel.SetActive(true);
         LoadedPanelAnimator.SetTrigger("LoadPanel");
         StartCoroutine(WaitForLoadPanelAnimation());
     }
@@ -58,8 +55,6 @@ public class PanelLoader : MonoBehaviour
     IEnumerator WaitForClosePanelAnimationAndClosePanel()
     {
         yield return new WaitForSeconds(transitionTime);
-
-        LoadedPanel.SetActive(false);
 
     }
 }
