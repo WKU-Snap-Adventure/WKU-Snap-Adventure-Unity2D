@@ -3,8 +3,8 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerInfo
 {
-    public string itemName;
-    public int itemAmount;
+    public int user_id;
+    public string item_name;
 
     // Given JSON input:
     // {"name":"Dr Charles","lives":3,"health":0.8}

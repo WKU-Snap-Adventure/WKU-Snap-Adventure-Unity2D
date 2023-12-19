@@ -14,9 +14,7 @@ public class InventoryAdmin : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.G)){
-            Report();
-        }
+        
     }
     
     public void AddSlot(Item item)
@@ -44,8 +42,7 @@ public class InventoryAdmin : MonoBehaviour
 
 // For every slot, try to load item refering to the inventory item list.
 
-    public void ClearSlot(Item item)
-    {
+    public void ClearSlot(Item item){
         slots = ItemSlotContainer.GetComponentsInChildren<InventorySlot>();
         for (int i = 0; i < slots.Length; i++)
         {
@@ -54,30 +51,15 @@ public class InventoryAdmin : MonoBehaviour
         }
     }
 
-    public void IncreaseItemAmount(Item item) 
-    {
+    public void IncreaseItemAmount(Item item) {
         slots = ItemSlotContainer.GetComponentsInChildren<InventorySlot>();
 
         for (int i = 0; i < slots.Length; i++)
         {
-            Debug.Log(slots[i].item.name);
             if (slots[i].item.name == item.name){
                 slots[i].itemAmount++;
                 slots[i].amount.text = slots[i].itemAmount.ToString();
             }
-        }
-    }
-
-    public void Report(){
-        foreach (var slot in slots)
-        {
-            string json = JsonUtility.ToJson(new
-            {
-                itemName = slot.item.name,
-                itemAmount = slot.itemAmount
-            });
-
-            Debug.Log(json);
         }
     }
 }

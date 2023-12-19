@@ -6,18 +6,14 @@ using System.Xml;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Networking;
+using System.Text;
+using System.Net;
 
 public class GameLaunch : MonoBehaviour
 {
-    private static int testcount = 0;
     private PlayerInfo playerInfo;
-    
-    public void add()
-    {
-        playerInfo.itemAmount++;
-        Debug.Log(playerInfo.itemAmount);
-    }
-    
+    private int user_id;
+
     void Awake()
     {
         //初始化游戏框架：游戏资源，网络。。。
@@ -25,6 +21,7 @@ public class GameLaunch : MonoBehaviour
         this.GameStart();
         Debug.Log(Application.persistentDataPath);
         //End
+
     }
 
     public void GameStart()
@@ -33,46 +30,50 @@ public class GameLaunch : MonoBehaviour
         this.gameObject.GetComponent<GameApp>().EnterGame();
     }
 
-    void Start()
+    // public void DownloadResFile()
+    // {
+    //     this.StartCoroutine(OnDownloadResFile());
+    // }
+
+    // void Start(){
+    //     this.user_id = 1;
+    // }
+
+    public void UploadFile(Item newItem)
     {
+        this.StartCoroutine(OnUploadFile(newItem));
     }
 
-    public void DownloadResFile()
-    {
-        this.StartCoroutine(OnDownloadResFile());
-    }
+    // IEnumerator OnDownloadResFile()
+    // {
+    //     string url = "http://127.0.0.1:6080/userdata/userdata.json";
+    //     UnityWebRequest req = UnityWebRequest.Get(url);
+    //     yield return req.SendWebRequest();
+    //     playerInfo = JsonUtility.FromJson<PlayerInfo>(req.downloadHandler.text);
+    //     Debug.Log(playerInfo.itemAmount);
+    // }
 
-    public void UploadFile()
+    IEnumerator OnUploadFile(Item newItem)
     {
-        this.StartCoroutine(OnUploadFile());
-    }
+        // playerInfo.user_id = user_id;
+        // playerInfo.item_name = newItem.name;
 
-    IEnumerator OnDownloadResFile()
-    {
-        string url = "http://127.0.0.1:6080/userdata/userdata.json";
-        UnityWebRequest req = UnityWebRequest.Get(url);
-        yield return req.SendWebRequest();
-        playerInfo = JsonUtility.FromJson<PlayerInfo>(req.downloadHandler.text);
-        Debug.Log(playerInfo.itemAmount);
-    }
-
-    IEnumerator OnUploadFile()
-    {
-        string returnData = JsonUtility.ToJson(playerInfo);
-        //byte[] returnStream = System.Text.Encoding.UTF8.GetBytes(returnData);
-        
-        UnityWebRequest req = UnityWebRequest.Put("http://127.0.0.1:6080/userdata/userdata.json",returnData);
-        req.SetRequestHeader("Content-Type", "application/json");
-        yield return req.SendWebRequest();
-        
-        if (req.result == UnityWebRequest.Result.Success)
-        {
-            Debug.Log("Upload successful");
+        // string returnData = JsonUtility.ToJson(playerInfo);
+        // UnityWebRequest req = UnityWebRequest.Put("http://192.168.3.4:8000/items", returnData);
+        // req.SetRequestHeader("Content-Type", "application/json");
+        var json = "{\"user_id\": 1,\"item_name\":"+ newItem.name +"}";
+        var bytes = Encoding.UTF8.GetBytes(json);
+        var responseCode = new HttpStatusCode();
+        using(var webRequest = new UnityWebRequest("http://192.168.3.4:8000/items","POST")) {
+            webRequest.uploadHandler = new UploadHandlerRaw(bytes);
+            webRequest.downloadHandler = new DownloadHandlerBuffer();
+            webRequest.SetRequestHeader("Content-type","application/json");
+            webRequest.SendWebRequest();
+            responseCode = (HttpStatusCode)webRequest.responseCode;
         }
-        else
-        {
-            Debug.LogError("Upload failed: " + req.error);
-        }
-        yield break;
+        yield return responseCode;
+
+    
     }
+
 }

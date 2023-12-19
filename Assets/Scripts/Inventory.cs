@@ -23,19 +23,28 @@ public class Inventory : MonoBehaviour
     }
     #endregion
 
-     
+
     public InventoryAdmin inventoryAdmin;
 
     public List<Item> itemList = new List<Item>();
 
+    public GameLaunch gameLaunch;
+
+    public Item newItem;
+
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.G)){
+            gameLaunch.UploadFile(newItem);
+        }
+    }
 
     public bool Add(Item newItem)
     {
         if (!newItem.isDefaultItem)
         {
             bool ifExist = itemList.Find(item => item.name == newItem.name) != null;
-            
-            if(!ifExist)
+
+            if (!ifExist)
             {
                 // Add slot
                 inventoryAdmin.AddSlot(newItem);
@@ -43,6 +52,9 @@ public class Inventory : MonoBehaviour
             }
             // Increase Number
             inventoryAdmin.IncreaseItemAmount(newItem);
+            
+            gameLaunch.UploadFile(newItem);
+
             return true;
         }
         return true;
@@ -52,4 +64,5 @@ public class Inventory : MonoBehaviour
     {
         itemList.Remove(item);
     }
+
 }

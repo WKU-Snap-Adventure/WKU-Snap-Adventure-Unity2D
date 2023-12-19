@@ -10,18 +10,11 @@ public class GameApp : MonoBehaviour
         this.StartCoroutine(GetUploadData());
     }
 
-    IEnumerator TestGetBaidu()
-    {
-        UnityWebRequest req = UnityWebRequest.Get("https://www.baidu.com");
-        yield return req.SendWebRequest();
-        Debug.Log("Success");
-        Debug.Log(req.downloadHandler.text);
-    }
-
     IEnumerator GetUploadData()
     {
-        UnityWebRequest req = UnityWebRequest.Get("http://127.0.0.1:6080/uploadData?TextInt=1");
+        UnityWebRequest req = UnityWebRequest.Get("http://192.168.3.4:8000/items");
         yield return req.SendWebRequest();
+        // playerInfo = JsonUtility.FromJson<PlayerInfo>(req.downloadHandler.text);
         Debug.Log(req.downloadHandler.text);
     }
 }
