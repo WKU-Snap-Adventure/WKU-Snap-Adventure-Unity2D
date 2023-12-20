@@ -7,6 +7,7 @@ using UnityEngine;
 // and maintaining the data record of inventory.
 public class Inventory : MonoBehaviour
 {
+
     #region Singleton
 
     public static Inventory instance;
@@ -22,17 +23,17 @@ public class Inventory : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(instance);
+
     }
     #endregion
-
-
-    public InventoryAdmin inventoryAdmin;
 
     public List<Item> itemList = new List<Item>();
 
     public GameLaunch gameLaunch;
 
     public Item newItem;
+
+    public InventoryAdmin inventoryAdmin;
 
     void Update(){
         if(Input.GetKeyDown(KeyCode.G)){

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Leaf Tool
   m_EditorClassIdentifier: 
   name: Leaf Tool
-  icon: {fileID: -1154763499, guid: 0f557000d4c48e3409ebcbae3bcc44b1, type: 3}
+  icon: {fileID: -194926128, guid: 0f557000d4c48e3409ebcbae3bcc44b1, type: 3}
   isDefaultItem: 0
   isFurniture: 1

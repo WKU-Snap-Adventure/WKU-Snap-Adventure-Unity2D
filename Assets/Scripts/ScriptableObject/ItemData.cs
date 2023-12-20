@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class ItemData 
 {
-    public int item_amount;
+    public int count;
     public string item_name;
 
     public static ItemData CreateFromJSON(string jsonString)

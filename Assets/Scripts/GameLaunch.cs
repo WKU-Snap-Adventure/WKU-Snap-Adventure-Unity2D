@@ -56,11 +56,17 @@ public class GameLaunch : MonoBehaviour
     IEnumerator OnUploadFile(Item newItem)
     {
         HttpStatusCode responseCode = 0;
+        string token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMzEwOTkwNSwianRpIjoiNDYwYTRiYWQtZjhkYi00MjU0LWFlZDUtZTViNjE2YzIyZDRhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzAzMTA5OTA1LCJjc3JmIjoiYTI5YjIyNzUtN2NlZC00NzBjLWJiMjktZTUyMjRiZGM0NWNkIiwiZXhwIjoxNzAzNTQxOTA1fQ.DDoEw3fgwkaITHnh6IvLdh5XNGn4s-0Fs8dFj3mXDpU";
 
-        using (var webRequest = new UnityWebRequest("http://60.204.219.4:8000/item_pickup?user_id=1&item_name=" + newItem.name, "POST"))
+        string jsonData = "{\"count\":" + 1 + ",\"item_name\":\"" + newItem.name + "\"}";
+        byte[] byteRaw = Encoding.UTF8.GetBytes(jsonData);
+
+        using (var webRequest = new UnityWebRequest("http://120.55.75.193:8000/bag/items", "POST"))
         {
+            webRequest.uploadHandler = new UploadHandlerRaw(byteRaw);
             webRequest.downloadHandler = new DownloadHandlerBuffer();
             webRequest.SetRequestHeader("Content-type", "application/json");
+            webRequest.SetRequestHeader("Authorization", "Bearer " + token);
 
             yield return webRequest.SendWebRequest();
 

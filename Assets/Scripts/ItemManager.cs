@@ -12,7 +12,6 @@ public class ItemManager : MonoBehaviour
     {
         GameObject itemManagerObject = new GameObject("ItemManager");
         itemManagerObject.AddComponent<ItemManager>();
-        DontDestroyOnLoad(itemManagerObject);
     }
 
     void Awake()

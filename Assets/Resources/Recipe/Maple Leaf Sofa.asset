@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Maple Leaf Sofa
   m_EditorClassIdentifier: 
   name: Maple Leaf Sofa
-  icon: {fileID: -1154763499, guid: 0f557000d4c48e3409ebcbae3bcc44b1, type: 3}
+  icon: {fileID: 1635837357, guid: 0f557000d4c48e3409ebcbae3bcc44b1, type: 3}
   items:
+  - {fileID: 11400000, guid: c440f36606c657c40aefbeea6b557adf, type: 2}
   - {fileID: 11400000, guid: c440f36606c657c40aefbeea6b557adf, type: 2}
   - {fileID: 11400000, guid: c440f36606c657c40aefbeea6b557adf, type: 2}
   - {fileID: 11400000, guid: c440f36606c657c40aefbeea6b557adf, type: 2}

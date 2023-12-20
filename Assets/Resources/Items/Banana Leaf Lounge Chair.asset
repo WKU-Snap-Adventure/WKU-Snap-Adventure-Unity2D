@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Banana Leaf Lounge Chair
   m_EditorClassIdentifier: 
   name: Banana Leaf Lounge Chair
-  icon: {fileID: -1418078175, guid: 0f557000d4c48e3409ebcbae3bcc44b1, type: 3}
+  icon: {fileID: 235671974, guid: 0f557000d4c48e3409ebcbae3bcc44b1, type: 3}
   isDefaultItem: 0
   isFurniture: 1

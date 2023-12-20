@@ -4,7 +4,8 @@ using UnityEngine;
 [System.Serializable]
 public class JsonForm 
 {
-    public List<ItemData> data;
+    public List<ItemData> items;
+    public string msg;
 
     public static JsonForm CreateFromJSON(string jsonString)
     {

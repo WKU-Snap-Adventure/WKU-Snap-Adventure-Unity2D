@@ -5,18 +5,26 @@ using UnityEngine;
 public class InventoryAdmin : MonoBehaviour
 {
     // This script contained in Canvas
+    
+    #region Singleton
+
+    public static InventoryAdmin instance;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+    #endregion
+
     public GameObject inventorySlot;
     public Transform ItemSlotContainer;
     public ItemManager itemManager;
     Inventory inventory;
 
-    InventorySlot[] slots;
-    
-    // Start is called before the first frame update
-    void Update()
-    {
-        
-    }
+    public InventorySlot[] slots;
     
     public void AddSlot(Item item)
     {
@@ -80,7 +88,7 @@ public class InventoryAdmin : MonoBehaviour
             InventorySlot newInventorySlot = newSlot.GetComponent<InventorySlot>();
 
             // Fill in the item info (Amount, item, sprite)
-            newInventorySlot.itemAmount = itemData.item_amount;
+            newInventorySlot.itemAmount = itemData.count;
 
             newInventorySlot.amount.enabled = true;
             newInventorySlot.amount.text = newInventorySlot.itemAmount.ToString();

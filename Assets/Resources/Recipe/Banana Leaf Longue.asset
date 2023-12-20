@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04b49561be9a7d54198c3864cad86ae7, type: 3}
-  m_Name: Leaf Bar Stool
+  m_Name: Banana Leaf Longue
   m_EditorClassIdentifier: 
-  name: Leaf Bar Stool
-  icon: {fileID: 1931745003, guid: 0f557000d4c48e3409ebcbae3bcc44b1, type: 3}
+  name: Banana Leaf Longue
+  icon: {fileID: 235671974, guid: 0f557000d4c48e3409ebcbae3bcc44b1, type: 3}
   items:
   - {fileID: 11400000, guid: c440f36606c657c40aefbeea6b557adf, type: 2}
   - {fileID: 11400000, guid: c440f36606c657c40aefbeea6b557adf, type: 2}
+  - {fileID: 11400000, guid: c440f36606c657c40aefbeea6b557adf, type: 2}
   - {fileID: 11400000, guid: 8c5b5c99e07e13a48aa33bb2b145c4e5, type: 2}
-  Outcome: {fileID: 11400000, guid: d0936f9bd55b22d478446d700acc5102, type: 2}
+  Outcome: {fileID: 11400000, guid: 1af935300b2cb8e44bbf7a7966270dc0, type: 2}
   isInteractable: 0
   needLight: 0

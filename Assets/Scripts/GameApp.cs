@@ -2,14 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
 
 public class GameApp : MonoBehaviour
 {
-
+    Inventory inventory;
     public InventoryAdmin inventoryAdmin;
+    public ItemManager itemManager;
+
+    public void Awake()
+    {
+        inventory = Inventory.instance;
+    }
     public void EnterGame()
     {
         this.StartCoroutine(LoadPlayerData());
@@ -18,11 +23,13 @@ public class GameApp : MonoBehaviour
     IEnumerator LoadPlayerData()
     {
         HttpStatusCode responseCode = 0;
+        string token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMzEwOTkwNSwianRpIjoiNDYwYTRiYWQtZjhkYi00MjU0LWFlZDUtZTViNjE2YzIyZDRhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzAzMTA5OTA1LCJjc3JmIjoiYTI5YjIyNzUtN2NlZC00NzBjLWJiMjktZTUyMjRiZGM0NWNkIiwiZXhwIjoxNzAzNTQxOTA1fQ.DDoEw3fgwkaITHnh6IvLdh5XNGn4s-0Fs8dFj3mXDpU";
 
-        using (var webRequest = new UnityWebRequest("http://60.204.219.4:8000/item_list?user_id=1", "POST"))
+        using (var webRequest = new UnityWebRequest("http://120.55.75.193:8000/bag/items", "GET"))
         {
             webRequest.downloadHandler = new DownloadHandlerBuffer();
             webRequest.SetRequestHeader("Content-type", "application/json");
+            webRequest.SetRequestHeader("Authorization", "Bearer " + token);
 
             yield return webRequest.SendWebRequest();
 
@@ -34,10 +41,16 @@ public class GameApp : MonoBehaviour
 
                 string jsonText = webRequest.downloadHandler.text;
 
+                Debug.Log(jsonText);
+
                 JsonForm jsonData = JsonUtility.FromJson<JsonForm>(jsonText);
 
-                foreach (ItemData itemData in jsonData.data.Skip(1))
+                foreach (ItemData itemData in jsonData.items)
                 {
+                    Debug.Log("itemData.count: " + itemData.count);
+                    Debug.Log("itemData.item_name: " + itemData.item_name);
+                    Item newItem = ItemManager.itemDictionary[itemData.item_name];
+                    inventory.itemList.Add(newItem);
                     inventoryAdmin.SetSlot(itemData);
                 }
             }
