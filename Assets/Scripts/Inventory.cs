@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 // This script contained in GameManager. Responsible for singleton the inventory 
@@ -20,6 +21,7 @@ public class Inventory : MonoBehaviour
         }
 
         instance = this;
+        DontDestroyOnLoad(instance);
     }
     #endregion
 
@@ -42,22 +44,29 @@ public class Inventory : MonoBehaviour
     {
         if (!newItem.isDefaultItem)
         {
-            bool ifExist = itemList.Find(item => item.name == newItem.name) != null;
+            if(!newItem.isFurniture){
+                bool ifExist = itemList.Find(item => item.name == newItem.name) != null;
 
-            if (!ifExist)
-            {
-                // Add slot
-                inventoryAdmin.AddSlot(newItem);
-                itemList.Add(newItem);
+                if (!ifExist)
+                {
+                    // Add slot
+                    inventoryAdmin.AddSlot(newItem);
+                    itemList.Add(newItem);
+                }
+                // Increase Number
+                inventoryAdmin.IncreaseItemAmount(newItem);
+
+                gameLaunch.UploadFile(newItem);
+
+                return true;
             }
-            // Increase Number
-            inventoryAdmin.IncreaseItemAmount(newItem);
-            
-            gameLaunch.UploadFile(newItem);
-
-            return true;
+            else
+            {
+                Debug.LogWarning("This item cannot be picked up.");
+                return false;
+            }
         }
-        return true;
+        return false;
     }
 
     public void Remove(Item item)

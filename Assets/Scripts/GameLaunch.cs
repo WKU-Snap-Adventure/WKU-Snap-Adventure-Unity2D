@@ -55,25 +55,29 @@ public class GameLaunch : MonoBehaviour
 
     IEnumerator OnUploadFile(Item newItem)
     {
-        // playerInfo.user_id = user_id;
-        // playerInfo.item_name = newItem.name;
+        HttpStatusCode responseCode = 0;
 
-        // string returnData = JsonUtility.ToJson(playerInfo);
-        // UnityWebRequest req = UnityWebRequest.Put("http://192.168.3.4:8000/items", returnData);
-        // req.SetRequestHeader("Content-Type", "application/json");
-        var json = "{\"user_id\": 1,\"item_name\":"+ newItem.name +"}";
-        var bytes = Encoding.UTF8.GetBytes(json);
-        var responseCode = new HttpStatusCode();
-        using(var webRequest = new UnityWebRequest("http://192.168.3.4:8000/items","POST")) {
-            webRequest.uploadHandler = new UploadHandlerRaw(bytes);
+        using (var webRequest = new UnityWebRequest("http://192.168.3.4:8000/item_pickup?user_id=1&item_name=" + newItem.name, "POST"))
+        {
             webRequest.downloadHandler = new DownloadHandlerBuffer();
-            webRequest.SetRequestHeader("Content-type","application/json");
-            webRequest.SendWebRequest();
-            responseCode = (HttpStatusCode)webRequest.responseCode;
-        }
-        yield return responseCode;
+            webRequest.SetRequestHeader("Content-type", "application/json");
 
-    
+            yield return webRequest.SendWebRequest();
+
+            if (webRequest.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log("Request successful!");
+                responseCode = (HttpStatusCode)webRequest.responseCode;
+                Debug.Log("Response Code: " + responseCode);
+                Debug.Log("Response Text: " + webRequest.downloadHandler.text);
+            }
+            else
+            {
+                Debug.LogError("Request failed: " + webRequest.error);
+            }
+        }
+
     }
+
 
 }

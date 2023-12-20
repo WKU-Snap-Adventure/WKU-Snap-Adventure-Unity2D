@@ -7,6 +7,7 @@ public class InventoryAdmin : MonoBehaviour
     // This script contained in Canvas
     public GameObject inventorySlot;
     public Transform ItemSlotContainer;
+    public ItemManager itemManager;
     Inventory inventory;
 
     InventorySlot[] slots;
@@ -62,4 +63,47 @@ public class InventoryAdmin : MonoBehaviour
             }
         }
     }
+
+    public void SetSlot(ItemData itemData)
+    {
+        GameObject newSlot = Instantiate(inventorySlot);
+
+        if (ItemSlotContainer != null)
+        {
+            // Generate new slot
+            RectTransform newSlotTransform = newSlot.GetComponent<RectTransform>();
+
+            newSlotTransform.SetParent(ItemSlotContainer, false);
+
+            newSlotTransform.localScale = Vector3.one;
+
+            InventorySlot newInventorySlot = newSlot.GetComponent<InventorySlot>();
+
+            // Fill in the item info (Amount, item, sprite)
+            newInventorySlot.itemAmount = itemData.amount;
+
+            newInventorySlot.amount.enabled = true;
+            newInventorySlot.amount.text = newInventorySlot.itemAmount.ToString();
+
+            // Call the static methods and fit in the item 
+            newInventorySlot.item = ItemManager.GetItem(itemData.name);
+
+            // Search and fit in the item sprite
+            if (ItemManager.itemIconDictionary.ContainsKey(itemData.name))
+            {
+                newInventorySlot.icon.sprite = ItemManager.GetItemIcon(itemData.name);
+                newInventorySlot.icon.enabled = true;
+            }
+            else
+            {
+                Debug.LogError("Item not found in dictionary: " + itemData.name);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("ItemSlotContainer not assigned. The InventorySlot will be a root-level object.");
+        }
+    }
+
+
 }
