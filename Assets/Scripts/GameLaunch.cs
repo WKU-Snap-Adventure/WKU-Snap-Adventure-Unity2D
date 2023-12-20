@@ -57,7 +57,7 @@ public class GameLaunch : MonoBehaviour
     {
         HttpStatusCode responseCode = 0;
 
-        using (var webRequest = new UnityWebRequest("http://192.168.3.4:8000/item_pickup?user_id=1&item_name=" + newItem.name, "POST"))
+        using (var webRequest = new UnityWebRequest("http://60.204.219.4:8000/item_pickup?user_id=1&item_name=" + newItem.name, "POST"))
         {
             webRequest.downloadHandler = new DownloadHandlerBuffer();
             webRequest.SetRequestHeader("Content-type", "application/json");

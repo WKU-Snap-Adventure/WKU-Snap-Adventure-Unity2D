@@ -80,23 +80,23 @@ public class InventoryAdmin : MonoBehaviour
             InventorySlot newInventorySlot = newSlot.GetComponent<InventorySlot>();
 
             // Fill in the item info (Amount, item, sprite)
-            newInventorySlot.itemAmount = itemData.amount;
+            newInventorySlot.itemAmount = itemData.item_amount;
 
             newInventorySlot.amount.enabled = true;
             newInventorySlot.amount.text = newInventorySlot.itemAmount.ToString();
 
             // Call the static methods and fit in the item 
-            newInventorySlot.item = ItemManager.GetItem(itemData.name);
+            newInventorySlot.item = ItemManager.GetItem(itemData.item_name);
 
             // Search and fit in the item sprite
-            if (ItemManager.itemIconDictionary.ContainsKey(itemData.name))
+            if (ItemManager.itemIconDictionary.ContainsKey(itemData.item_name))
             {
-                newInventorySlot.icon.sprite = ItemManager.GetItemIcon(itemData.name);
+                newInventorySlot.icon.sprite = ItemManager.GetItemIcon(itemData.item_name);
                 newInventorySlot.icon.enabled = true;
             }
             else
             {
-                Debug.LogError("Item not found in dictionary: " + itemData.name);
+                Debug.LogError("Item not found in dictionary: " + itemData.item_name);
             }
         }
         else

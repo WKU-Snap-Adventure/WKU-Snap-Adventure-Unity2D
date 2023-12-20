@@ -17,14 +17,7 @@ public class ItemManager : MonoBehaviour
 
     void Awake()
     {
-        if (FindObjectsOfType<ItemManager>().Length > 1)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            PopulateItemDictionary();
-        }
+        PopulateItemDictionary();
     }
 
     [ContextMenu("Populate Item Dictionary")]
@@ -50,10 +43,10 @@ public class ItemManager : MonoBehaviour
             }
         }
 
-        AssetDatabase.Refresh(); 
+        AssetDatabase.Refresh();
 
         Debug.Log("Item Dictionary populated with " + itemDictionary.Count + " items.");
-        Debug.Log("Item Dictionary populated with " + itemIconDictionary.Count + " items.");
+        Debug.Log("Item Icon Dictionary populated with " + itemIconDictionary.Count + " items.");
     }
 
     public static Item GetItem(string itemName)
