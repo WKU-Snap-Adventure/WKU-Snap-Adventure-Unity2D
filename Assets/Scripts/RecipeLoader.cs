@@ -10,6 +10,8 @@ public class RecipeLoader : MonoBehaviour
     public Transform materialContainer;
     public GameObject material;
     public Image outcomeImage;
+    public Image SuccessSign;
+    public Image FailSign;
 
     void Start()
     {
@@ -50,6 +52,9 @@ public class RecipeLoader : MonoBehaviour
         furnitureName.text = string.Empty;
         outcomeImage.enabled = false;
         outcomeImage.sprite = null;
+
+        SuccessSign.enabled = false;
+        SuccessSign.enabled = false;
 
         if (materialContainer != null)
         {
