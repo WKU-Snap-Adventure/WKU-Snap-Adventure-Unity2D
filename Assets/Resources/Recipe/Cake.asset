@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04b49561be9a7d54198c3864cad86ae7, type: 3}
+  m_Name: Cake
+  m_EditorClassIdentifier: 
+  name: Cake
+  icon: {fileID: 21300000, guid: 094e1b53f0c53a64b99ed38a393ed675, type: 3}
+  items:
+  - {fileID: 11400000, guid: ccf39a5fdf6aa5c40aace0488025b387, type: 2}
+  - {fileID: 11400000, guid: 7dcdca4ec12d41f459475a80dc7914c8, type: 2}
+  Outcome: {fileID: 11400000, guid: 3a002269d211fd7469f0231d7ed3be5a, type: 2}
+  isInteractable: 0
+  needLight: 0

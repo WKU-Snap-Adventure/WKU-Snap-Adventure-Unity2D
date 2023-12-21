@@ -25,7 +25,7 @@ public class GameApp : MonoBehaviour
         HttpStatusCode responseCode = 0;
         string token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMzEwOTkwNSwianRpIjoiNDYwYTRiYWQtZjhkYi00MjU0LWFlZDUtZTViNjE2YzIyZDRhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzAzMTA5OTA1LCJjc3JmIjoiYTI5YjIyNzUtN2NlZC00NzBjLWJiMjktZTUyMjRiZGM0NWNkIiwiZXhwIjoxNzAzNTQxOTA1fQ.DDoEw3fgwkaITHnh6IvLdh5XNGn4s-0Fs8dFj3mXDpU";
 
-        using (var webRequest = new UnityWebRequest("http://120.55.75.193:8000/bag/items", "GET"))
+        using (var webRequest = new UnityWebRequest("https://alist.x-cloud.top:8000/bag/items", "GET"))
         {
             webRequest.downloadHandler = new DownloadHandlerBuffer();
             webRequest.SetRequestHeader("Content-type", "application/json");

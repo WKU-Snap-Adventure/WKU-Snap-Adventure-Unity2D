@@ -29,9 +29,7 @@ public class RecipePanel : MonoBehaviour
 
     public void WriteOnBoard(){
         recipeLoader.ClearRecipe();
-        recipeLoader.LoadRecipe(recipe);
-        Debug.Log(recipe.items.Length);
-        
+        recipeLoader.LoadRecipe(recipe);        
     }
 
     public void ShowSuccessSign(){
@@ -52,8 +50,16 @@ public class RecipePanel : MonoBehaviour
                 {
                     if(item.name == inventorySlot.item.name)
                     {
+                        Debug.Log(inventorySlot.itemAmount);
                         inventorySlot.itemAmount--;
-                    };
+                        Debug.Log(inventorySlot.itemAmount);
+                        if (inventorySlot.itemAmount == 0)
+                        {
+                            Debug.LogWarning("The item will be used up! ");
+                            ShowFailSign();
+                            return;
+                        }
+                    }
                 }
             }
             

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04b49561be9a7d54198c3864cad86ae7, type: 3}
+  m_Name: Interior Tree
+  m_EditorClassIdentifier: 
+  name: Interior Tree
+  icon: {fileID: -1727597246, guid: 1acf3260885a3c8488b91cb87a0ba60e, type: 3}
+  items:
+  - {fileID: 11400000, guid: c440f36606c657c40aefbeea6b557adf, type: 2}
+  - {fileID: 11400000, guid: 8c5b5c99e07e13a48aa33bb2b145c4e5, type: 2}
+  - {fileID: 11400000, guid: 43618750b2f12164085a1626522b2e2d, type: 2}
+  - {fileID: 11400000, guid: 7dcdca4ec12d41f459475a80dc7914c8, type: 2}
+  Outcome: {fileID: 11400000, guid: 9d1279d5369b3e1409e15410ad55067e, type: 2}
+  isInteractable: 0
+  needLight: 0

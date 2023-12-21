@@ -61,7 +61,7 @@ public class GameLaunch : MonoBehaviour
         string jsonData = "{\"count\":" + 1 + ",\"item_name\":\"" + newItem.name + "\"}";
         byte[] byteRaw = Encoding.UTF8.GetBytes(jsonData);
 
-        using (var webRequest = new UnityWebRequest("http://120.55.75.193:8000/bag/items", "POST"))
+        using (var webRequest = new UnityWebRequest("https://alist.x-cloud.top:8000/bag/items", "POST"))
         {
             webRequest.uploadHandler = new UploadHandlerRaw(byteRaw);
             webRequest.downloadHandler = new DownloadHandlerBuffer();
