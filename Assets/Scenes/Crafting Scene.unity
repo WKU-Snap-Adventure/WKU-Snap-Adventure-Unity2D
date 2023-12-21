@@ -504,7 +504,7 @@ MonoBehaviour:
   recipeLoader: {fileID: 1275322768}
   SuccessSign: {fileID: 759215235}
   FailSign: {fileID: 29811195}
-  inventoryAdmin: {fileID: 0}
+  inventoryAdmin: {fileID: 295917756}
 --- !u!1 &200833433 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5651099002223293389, guid: f956584533fcda046b6411d01fed3f84, type: 3}
@@ -533,7 +533,7 @@ MonoBehaviour:
   recipeLoader: {fileID: 1275322768}
   SuccessSign: {fileID: 759215235}
   FailSign: {fileID: 29811195}
-  inventoryAdmin: {fileID: 0}
+  inventoryAdmin: {fileID: 295917756}
 --- !u!114 &222762199 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5651099002621116023, guid: f956584533fcda046b6411d01fed3f84, type: 3}
@@ -759,7 +759,7 @@ MonoBehaviour:
   recipeLoader: {fileID: 1275322768}
   SuccessSign: {fileID: 759215235}
   FailSign: {fileID: 29811195}
-  inventoryAdmin: {fileID: 0}
+  inventoryAdmin: {fileID: 295917756}
 --- !u!1 &295917749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,7 +1157,7 @@ MonoBehaviour:
   recipeLoader: {fileID: 1275322768}
   SuccessSign: {fileID: 759215235}
   FailSign: {fileID: 29811195}
-  inventoryAdmin: {fileID: 0}
+  inventoryAdmin: {fileID: 295917756}
 --- !u!1 &486756475
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,7 +2050,7 @@ MonoBehaviour:
   recipeLoader: {fileID: 1275322768}
   SuccessSign: {fileID: 759215235}
   FailSign: {fileID: 29811195}
-  inventoryAdmin: {fileID: 0}
+  inventoryAdmin: {fileID: 295917756}
 --- !u!1001 &1016845911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2517,7 +2517,7 @@ MonoBehaviour:
   recipeLoader: {fileID: 1275322768}
   SuccessSign: {fileID: 759215235}
   FailSign: {fileID: 29811195}
-  inventoryAdmin: {fileID: 0}
+  inventoryAdmin: {fileID: 295917756}
 --- !u!1 &1275322764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2618,6 +2618,8 @@ MonoBehaviour:
   materialContainer: {fileID: 1282436968}
   material: {fileID: 3629790297083100720, guid: ea2fc8bc1c0113243858a6fedad93545, type: 3}
   outcomeImage: {fileID: 1244873984}
+  SuccessSign: {fileID: 759215235}
+  FailSign: {fileID: 29811195}
 --- !u!1 &1282436967
 GameObject:
   m_ObjectHideFlags: 0
@@ -3149,7 +3151,7 @@ MonoBehaviour:
   recipeLoader: {fileID: 1275322768}
   SuccessSign: {fileID: 759215235}
   FailSign: {fileID: 29811195}
-  inventoryAdmin: {fileID: 0}
+  inventoryAdmin: {fileID: 295917756}
 --- !u!114 &1504555076 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5651099002097625685, guid: f956584533fcda046b6411d01fed3f84, type: 3}
@@ -3393,7 +3395,7 @@ MonoBehaviour:
   recipeLoader: {fileID: 1275322768}
   SuccessSign: {fileID: 759215235}
   FailSign: {fileID: 29811195}
-  inventoryAdmin: {fileID: 0}
+  inventoryAdmin: {fileID: 295917756}
 --- !u!114 &1866695308 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5651099002097625685, guid: f956584533fcda046b6411d01fed3f84, type: 3}
@@ -3583,7 +3585,7 @@ MonoBehaviour:
   recipeLoader: {fileID: 1275322768}
   SuccessSign: {fileID: 759215235}
   FailSign: {fileID: 29811195}
-  inventoryAdmin: {fileID: 0}
+  inventoryAdmin: {fileID: 295917756}
 --- !u!1 &1914289802
 GameObject:
   m_ObjectHideFlags: 0
@@ -3896,7 +3898,7 @@ MonoBehaviour:
   recipeLoader: {fileID: 1275322768}
   SuccessSign: {fileID: 759215235}
   FailSign: {fileID: 29811195}
-  inventoryAdmin: {fileID: 0}
+  inventoryAdmin: {fileID: 295917756}
 --- !u!1001 &5651099003405637510
 PrefabInstance:
   m_ObjectHideFlags: 0
