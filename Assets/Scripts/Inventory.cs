@@ -16,6 +16,7 @@ public class Inventory : MonoBehaviour
     {
         if (instance != null)
         {
+            Destroy(gameObject);   
             Debug.LogWarning("More than one instance of Inventory found!");
             return;
         }

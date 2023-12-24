@@ -51,3 +51,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LoadedPanel: {fileID: 0}
   LoadedPanelAnimator: {fileID: 0}
+  transitionTime: 1

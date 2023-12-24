@@ -8,16 +8,20 @@ public class InventoryAdmin : MonoBehaviour
     
     #region Singleton
 
-   public static InventoryAdmin instance;
-
-    void Awake()
+    public static InventoryAdmin instance;
+    private static bool origional = true;
+    
+    protected virtual void Awake()
     {
-        if (instance != null)
-            return;
-
-        instance = this;
-        DontDestroyOnLoad(instance);
+        if (origional) {
+            instance = this as InventoryAdmin;
+            origional = false;
+            DontDestroyOnLoad(this.gameObject);
+        } else {
+            Destroy(this.gameObject);
+        }
     }
+
     #endregion
 
     public GameObject inventorySlot;

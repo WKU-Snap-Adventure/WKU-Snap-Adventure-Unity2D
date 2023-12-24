@@ -5,19 +5,39 @@ using UnityEngine;
 
 public class SceneControl : MonoBehaviour
 {
+    public GameObject MainScene;
+    public GameObject CraftingScene;
 
-    public GameObject GridBuildingBar; 
     void Start()
     {
+        MainScene = GameObject.Find("Main Scene");
+        if(MainScene == null)
+        {
+            Debug.LogWarning("Did not get MainScene");
+        }
+
+        CraftingScene = GameObject.Find("Crafting Scene");
+        if(CraftingScene == null)
+        {
+            Debug.LogWarning("Did not get CraftingScene");
+        }
+
+        ChangeVisibility();
+    }
+
+    public void ChangeVisibility(){
         string currentSceneName = SceneManager.GetActiveScene().name;
+        Debug.Log(currentSceneName);
 
         if (currentSceneName == "Main Scene")
         {
-            ShowObject(GridBuildingBar);
+            ShowObject(MainScene);
+            HideObject(CraftingScene);
         }
         else if (currentSceneName == "Crafting Scene")
         {
-            HideObject(GridBuildingBar);
+            ShowObject(CraftingScene);
+            HideObject(MainScene);
         }
     }
 
@@ -29,7 +49,9 @@ public class SceneControl : MonoBehaviour
 
     void HideObject(GameObject obj)
     {
-        if (obj != null)
-            obj.SetActive(false);
+        if (obj != null){
+            Debug.Log("Damn");
+            obj.SetActive(false);   
+        }
     }
 }
