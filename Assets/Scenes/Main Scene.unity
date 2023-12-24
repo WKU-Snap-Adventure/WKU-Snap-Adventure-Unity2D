@@ -353,6 +353,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &122613307 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 820031298435446185, guid: be52d10939a942d49b36545faa0441eb, type: 3}
+  m_PrefabInstance: {fileID: 8940833465501330782}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa088d0559842d4dacc432b90449718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &164877978
 GameObject:
   m_ObjectHideFlags: 0
@@ -31429,6 +31440,18 @@ PrefabInstance:
     - target: {fileID: 2448406433455292163, guid: be52d10939a942d49b36545faa0441eb, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2448406434061477070, guid: be52d10939a942d49b36545faa0441eb, type: 3}
+      propertyPath: inventoryAdmin
+      value: 
+      objectReference: {fileID: 929863943}
+    - target: {fileID: 2448406434066020058, guid: be52d10939a942d49b36545faa0441eb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 122613307}
+    - target: {fileID: 2448406434066020058, guid: be52d10939a942d49b36545faa0441eb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PerformRecipe
       objectReference: {fileID: 0}
     - target: {fileID: 4434798655078336093, guid: be52d10939a942d49b36545faa0441eb, type: 3}
       propertyPath: m_AnchorMax.y

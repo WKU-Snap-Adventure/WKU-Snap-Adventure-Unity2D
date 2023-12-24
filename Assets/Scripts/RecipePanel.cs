@@ -14,10 +14,11 @@ public class RecipePanel : MonoBehaviour
     public Image FailSign;
     
     Inventory inventory;
-    public InventoryAdmin inventoryAdmin;
+    InventoryAdmin inventoryAdmin;
 
     private void Awake(){
         inventory = Inventory.instance;
+        inventoryAdmin = InventoryAdmin.instance;
     }
 
     void Start()
@@ -41,30 +42,30 @@ public class RecipePanel : MonoBehaviour
     }
 
     public void PerformRecipe(){
-        foreach (Item item in recipe.items)
-        {
-            bool ifExist = inventory.itemList.Find(inventoryItem => inventoryItem.name == item.name) != null;
-            if(ifExist) 
-            {
-                foreach (InventorySlot inventorySlot in inventoryAdmin.slots)
-                {
-                    if(item.name == inventorySlot.item.name)
-                    {
-                        Debug.Log(inventorySlot.itemAmount);
-                        inventorySlot.itemAmount--;
-                        Debug.Log(inventorySlot.itemAmount);
-                        if (inventorySlot.itemAmount == 0)
-                        {
-                            Debug.LogWarning("The item will be used up! ");
-                            ShowFailSign();
-                            return;
-                        }
-                    }
-                }
-            }
+        // foreach (Item item in recipe.items)
+        // {
+        //     bool ifExist = inventory.itemList.Find(inventoryItem => inventoryItem.name == item.name) != null;
+        //     Debug.Log(ifExist);
+        //     if(ifExist) 
+        //     {
+        //         foreach (InventorySlot inventorySlot in inventoryAdmin.slots)
+        //         {
+        //             Debug.Log(inventorySlot.item.name);
+        //             if(item.name == inventorySlot.item.name)
+        //             {
+        //                 inventorySlot.itemAmount--;
+        //                 if (inventorySlot.itemAmount == 0)
+        //                 {
+        //                     Debug.LogWarning("The item will be used up! ");
+        //                     ShowFailSign();
+        //                     return;
+        //                 }
+        //             }
+        //         }
+        //     }
             
-        }
-        Debug.Log(inventory.itemList);
+        // }
+        // Debug.Log(inventory.itemList);
         ShowSuccessSign();
     }
 }

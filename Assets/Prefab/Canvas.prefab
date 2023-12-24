@@ -1039,7 +1039,7 @@ GameObject:
   - component: {fileID: 2448406433455292160}
   - component: {fileID: 2448406433455292161}
   - component: {fileID: 2448406433455292162}
-  - component: {fileID: 2448406434061477070}
+  - component: {fileID: 820031298435446185}
   m_Layer: 5
   m_Name: Recipe
   m_TagString: Untagged
@@ -1151,7 +1151,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2448406434061477070}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RecipePanel, Assembly-CSharp
         m_MethodName: WriteOnBoard
         m_Mode: 1
@@ -1163,7 +1163,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2448406434061477070
+--- !u!114 &820031298435446185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1181,7 +1181,6 @@ MonoBehaviour:
   recipeLoader: {fileID: 2448406433213594335}
   SuccessSign: {fileID: 2448406432655699916}
   FailSign: {fileID: 2448406432194706100}
-  inventoryAdmin: {fileID: 0}
 --- !u!1 &2448406433488161533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,7 +1591,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2448406434061477070}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RecipePanel, Assembly-CSharp
         m_MethodName: PerformRecipe
         m_Mode: 1
@@ -3898,7 +3897,6 @@ MonoBehaviour:
   recipeLoader: {fileID: 2448406433213594335}
   SuccessSign: {fileID: 2448406432655699916}
   FailSign: {fileID: 2448406432194706100}
-  inventoryAdmin: {fileID: 0}
 --- !u!1 &8040825529553383454
 GameObject:
   m_ObjectHideFlags: 0
@@ -4205,7 +4203,6 @@ MonoBehaviour:
   recipeLoader: {fileID: 2448406433213594335}
   SuccessSign: {fileID: 2448406432655699916}
   FailSign: {fileID: 2448406432194706100}
-  inventoryAdmin: {fileID: 0}
 --- !u!1 &8040825529650231869
 GameObject:
   m_ObjectHideFlags: 0
@@ -4516,7 +4513,6 @@ MonoBehaviour:
   recipeLoader: {fileID: 2448406433213594335}
   SuccessSign: {fileID: 2448406432655699916}
   FailSign: {fileID: 2448406432194706100}
-  inventoryAdmin: {fileID: 0}
 --- !u!1 &8040825529881979668
 GameObject:
   m_ObjectHideFlags: 0
@@ -4823,7 +4819,6 @@ MonoBehaviour:
   recipeLoader: {fileID: 2448406433213594335}
   SuccessSign: {fileID: 2448406432655699916}
   FailSign: {fileID: 2448406432194706100}
-  inventoryAdmin: {fileID: 0}
 --- !u!1 &8040825529960840634
 GameObject:
   m_ObjectHideFlags: 0
@@ -4978,7 +4973,6 @@ MonoBehaviour:
   recipeLoader: {fileID: 2448406433213594335}
   SuccessSign: {fileID: 2448406432655699916}
   FailSign: {fileID: 2448406432194706100}
-  inventoryAdmin: {fileID: 0}
 --- !u!1 &8040825529971297319
 GameObject:
   m_ObjectHideFlags: 0
@@ -5370,7 +5364,6 @@ MonoBehaviour:
   recipeLoader: {fileID: 2448406433213594335}
   SuccessSign: {fileID: 2448406432655699916}
   FailSign: {fileID: 2448406432194706100}
-  inventoryAdmin: {fileID: 0}
 --- !u!1 &8040825530103604256
 GameObject:
   m_ObjectHideFlags: 0
@@ -5761,7 +5754,6 @@ MonoBehaviour:
   recipeLoader: {fileID: 2448406433213594335}
   SuccessSign: {fileID: 2448406432655699916}
   FailSign: {fileID: 2448406432194706100}
-  inventoryAdmin: {fileID: 0}
 --- !u!1 &8040825530448856211
 GameObject:
   m_ObjectHideFlags: 0
@@ -6303,7 +6295,6 @@ MonoBehaviour:
   recipeLoader: {fileID: 2448406433213594335}
   SuccessSign: {fileID: 2448406432655699916}
   FailSign: {fileID: 2448406432194706100}
-  inventoryAdmin: {fileID: 0}
 --- !u!1 &8040825531057281505
 GameObject:
   m_ObjectHideFlags: 0
@@ -6611,7 +6602,6 @@ MonoBehaviour:
   recipeLoader: {fileID: 2448406433213594335}
   SuccessSign: {fileID: 2448406432655699916}
   FailSign: {fileID: 2448406432194706100}
-  inventoryAdmin: {fileID: 0}
 --- !u!1 &8040825531302589065
 GameObject:
   m_ObjectHideFlags: 0

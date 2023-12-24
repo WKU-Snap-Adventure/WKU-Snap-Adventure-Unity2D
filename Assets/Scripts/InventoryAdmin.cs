@@ -68,7 +68,6 @@ public class InventoryAdmin : MonoBehaviour
         slots = ItemSlotContainer.GetComponentsInChildren<InventorySlot>();
         for (int i = 0; i < slots.Length; i++)
             Destroy(slots[i].gameObject);
-            Debug.Log("Yuanshen Qidong!!");
     }
 
     public void IncreaseItemAmount(Item item) {

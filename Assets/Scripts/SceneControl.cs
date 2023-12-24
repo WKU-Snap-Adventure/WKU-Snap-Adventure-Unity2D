@@ -27,7 +27,6 @@ public class SceneControl : MonoBehaviour
 
     public void ChangeVisibility(){
         string currentSceneName = SceneManager.GetActiveScene().name;
-        Debug.Log(currentSceneName);
 
         if (currentSceneName == "Main Scene")
         {
@@ -50,7 +49,6 @@ public class SceneControl : MonoBehaviour
     void HideObject(GameObject obj)
     {
         if (obj != null){
-            Debug.Log("Damn");
             obj.SetActive(false);   
         }
     }
