@@ -6,13 +6,24 @@ public class ItemManager : MonoBehaviour
 {
     public static Dictionary<string, Item> itemDictionary = new Dictionary<string, Item>();
     public static Dictionary<string, Sprite> itemIconDictionary = new Dictionary<string, Sprite>();
-
+   
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     static void OnBeforeSceneLoadRuntimeMethod()
     {
-        GameObject itemManagerObject = new GameObject("ItemManager");
-        itemManagerObject.AddComponent<ItemManager>();
+        ItemManager existingItemManager = FindObjectOfType<ItemManager>();
+
+        if (existingItemManager == null)
+        {
+            GameObject itemManagerObject = new GameObject("ItemManager");
+            itemManagerObject.AddComponent<ItemManager>();
+            DontDestroyOnLoad(itemManagerObject);
+        }
+        else
+        {
+            Debug.LogWarning("ItemManager already exists in the scene.");
+        }
     }
+
 
     void Awake()
     {

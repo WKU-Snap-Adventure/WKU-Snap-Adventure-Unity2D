@@ -14,21 +14,21 @@ public class GameLaunch : MonoBehaviour
     private PlayerInfo playerInfo;
     private int user_id;
 
-    void Awake()
-    {
-        //初始化游戏框架：游戏资源，网络。。。
-        this.gameObject.AddComponent<GameApp>();
-        this.GameStart();
-        Debug.Log(Application.persistentDataPath);
-        //End
+    // void Awake()
+    // {
+    //     //初始化游戏框架：游戏资源，网络。。。
+    //     this.gameObject.AddComponent<GameApp>();
+    //     this.GameStart();
+    //     Debug.Log(Application.persistentDataPath);
+    //     //End
 
-    }
+    // }
 
-    public void GameStart()
-    {
-        //检测资源更新
-        this.gameObject.GetComponent<GameApp>().EnterGame();
-    }
+    // public void GameStart()
+    // {
+    //     //检测资源更新
+    //     this.gameObject.GetComponent<GameApp>().EnterGame();
+    // }
 
     // public void DownloadResFile()
     // {

@@ -12,7 +12,6 @@ public class Inventory : MonoBehaviour
 
     public static Inventory instance;
 
-
     void Awake()
     {
         if (instance != null)
@@ -23,7 +22,6 @@ public class Inventory : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(instance);
-
     }
     #endregion
 
@@ -70,9 +68,9 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    public void Remove(Item item)
+    public void ClearItemList()
     {
-        itemList.Remove(item);
+        itemList.Clear();
     }
 
 }

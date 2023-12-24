@@ -33,7 +33,4 @@ public class InventorySlot : MonoBehaviour
         itemAmount = 0;
     }
 
-    public void RemoveToTheTrashcan(){
-        Inventory.instance.Remove(item);
-    }
 }

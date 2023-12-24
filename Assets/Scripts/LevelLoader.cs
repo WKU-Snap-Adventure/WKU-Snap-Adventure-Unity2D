@@ -10,12 +10,6 @@ public class LevelLoader : MonoBehaviour
     public float transitionTime = 1f;
     public int toWhichLevelIndex;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void LoadNextLevel(){
         StartCoroutine(LoadLevel(toWhichLevelIndex));
     }

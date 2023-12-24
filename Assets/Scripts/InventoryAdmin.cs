@@ -8,14 +8,15 @@ public class InventoryAdmin : MonoBehaviour
     
     #region Singleton
 
-    public static InventoryAdmin instance;
+   public static InventoryAdmin instance;
 
     void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
+        if (instance != null)
+            return;
+
+        instance = this;
+        DontDestroyOnLoad(instance);
     }
     #endregion
 
@@ -50,7 +51,6 @@ public class InventoryAdmin : MonoBehaviour
 
 
 // For every slot, try to load item refering to the inventory item list.
-
     public void ClearSlot(Item item){
         slots = ItemSlotContainer.GetComponentsInChildren<InventorySlot>();
         for (int i = 0; i < slots.Length; i++)
@@ -58,6 +58,13 @@ public class InventoryAdmin : MonoBehaviour
             if (slots[i].item.name == item.name)
                 slots[i].ClearSlot();
         }
+    }
+
+    public void ClearAllSlot(){
+        slots = ItemSlotContainer.GetComponentsInChildren<InventorySlot>();
+        for (int i = 0; i < slots.Length; i++)
+            Destroy(slots[i].gameObject);
+            Debug.Log("Yuanshen Qidong!!");
     }
 
     public void IncreaseItemAmount(Item item) {
