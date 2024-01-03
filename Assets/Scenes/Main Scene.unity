@@ -31425,6 +31425,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2448406433455292162, guid: be52d10939a942d49b36545faa0441eb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 122613307}
+    - target: {fileID: 2448406433455292162, guid: be52d10939a942d49b36545faa0441eb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: WriteOnBoard
+      objectReference: {fileID: 0}
     - target: {fileID: 2448406433455292163, guid: be52d10939a942d49b36545faa0441eb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -31452,6 +31460,10 @@ PrefabInstance:
     - target: {fileID: 2448406434066020058, guid: be52d10939a942d49b36545faa0441eb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PerformRecipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 2448406434066020060, guid: be52d10939a942d49b36545faa0441eb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4434798655078336093, guid: be52d10939a942d49b36545faa0441eb, type: 3}
       propertyPath: m_AnchorMax.y
@@ -31804,6 +31816,10 @@ PrefabInstance:
     - target: {fileID: 8940833465789396063, guid: be52d10939a942d49b36545faa0441eb, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940833465789396063, guid: be52d10939a942d49b36545faa0441eb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be52d10939a942d49b36545faa0441eb, type: 3}
